@@ -1,0 +1,57 @@
+.auto-complete-input {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  .input-wrapper {
+    position: relative;
+
+    .input {
+      width: 100%;
+      padding-right: 26px;
+    }
+
+    .close-icon {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 2px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  }
+
+  .options {
+    max-height: 250px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 0;
+    display: none;
+    position: absolute;
+
+    &.show {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      height: auto;
+      z-index: 100;
+
+      li {
+        opacity: 1;
+        color: white;
+        background-color: black;
+        transition: 0.3s;
+        padding: 5px 10px;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          outline: none;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
